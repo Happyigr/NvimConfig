@@ -16,6 +16,7 @@ vim.opt.expandtab = true
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("n", "<C-S>", ":w<CR>")
+vim.keymap.set("v", "<C-c>", '"+y')
 
 -- move.nvim
 local opts = { noremap = true, silent = true }

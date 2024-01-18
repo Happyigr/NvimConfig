@@ -6,5 +6,6 @@ require("conform").setup({
 		-- Use a sub-list to run only the first available formatter
 		cpp = { "clang_format" },
 		rust = { "rustfmt" },
+		toml = { "taplo" },
 	},
 })
