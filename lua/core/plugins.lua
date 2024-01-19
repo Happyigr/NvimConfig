@@ -47,6 +47,7 @@ local plugins = {
 		dependencies = { { "nvim-lua/plenary.nvim", "BurntSushi/ripgrep" } },
 	},
 	--other
+	"numToStr/Comment.nvim",
 	"fedepujol/move.nvim",
 }
 

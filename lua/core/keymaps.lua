@@ -18,6 +18,8 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("n", "<C-S>", ":w<CR>")
 vim.keymap.set("v", "<C-c>", '"+y')
 
+-- comment.nvim
+
 -- move.nvim
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<A-j>", ":MoveLine(1)<CR>", opts)
