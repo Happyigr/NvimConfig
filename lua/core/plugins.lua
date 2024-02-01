@@ -47,8 +47,46 @@ local plugins = {
 		dependencies = { { "nvim-lua/plenary.nvim", "BurntSushi/ripgrep" } },
 	},
 	--other
-	"numToStr/Comment.nvim",
+	"xiyaowong/transparent.nvim",
+	{
+		"smjonas/inc-rename.nvim",
+		config = function()
+			require("inc_rename").setup()
+		end,
+	},
+	{
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	},
 	"fedepujol/move.nvim",
+	{
+		"m4xshen/autoclose.nvim",
+		config = function()
+			require("autoclose").setup()
+		end,
+	},
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+		opts = {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		},
+	},
+	{
+		"startup-nvim/startup.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+		config = function()
+			require("startup").setup()
+		end,
+	},
 }
 
 local opts = {}

@@ -18,7 +18,10 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("n", "<C-S>", ":w<CR>")
 vim.keymap.set("v", "<C-c>", '"+y')
 
--- comment.nvim
+-- inc-rename.nvim
+vim.keymap.set("n", "<leader>cr", function()
+	return ":IncRename " .. vim.fn.expand("<cword>")
+end, { expr = true })
 
 -- move.nvim
 local opts = { noremap = true, silent = true }

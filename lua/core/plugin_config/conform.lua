@@ -7,5 +7,6 @@ require("conform").setup({
 		cpp = { "clang_format" },
 		rust = { "rustfmt" },
 		toml = { "taplo" },
+		bash = { "beutysh" },
 	},
 })
