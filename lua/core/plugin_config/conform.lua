@@ -8,5 +8,7 @@ require("conform").setup({
 		rust = { "rustfmt" },
 		toml = { "taplo" },
 		bash = { "beutysh" },
+		css = { "prettier" },
+		html = { "prettier" },
 	},
 })

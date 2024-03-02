@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "taplo" },
+	ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "taplo", "pyright", "html", "cssls", "tailwindcss" },
 })
 
 local on_attach = function(_, _)
@@ -15,14 +15,9 @@ end
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-require("lspconfig").lua_ls.setup({
-	ftp = "lua",
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-require("lspconfig").clangd.setup({
-	ftp = "cpp",
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
+require("lspconfig").tailwindcss.setup({ ftp = "tcss", on_atatch = on_attach, capabilities = capabilities })
+require("lspconfig").cssls.setup({ ftp = "css", on_atatch = on_attach, capabilities = capabilities })
+require("lspconfig").html.setup({ ftp = "html", on_atatch = on_attach, capabilities = capabilities })
+require("lspconfig").pyright.setup({ ftp = "python", on_atatch = on_attach, capabilities = capabilities })
+require("lspconfig").lua_ls.setup({ ftp = "lua", on_attach = on_attach, capabilities = capabilities })
+require("lspconfig").clangd.setup({ ftp = "cpp", on_attach = on_attach, capabilities = capabilities })
